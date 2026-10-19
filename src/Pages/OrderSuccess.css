@@ -1,0 +1,98 @@
+.order-success-page {
+  min-height: 75vh;
+  padding: 60px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #faf9f6;
+  color: #252525;
+}
+
+.order-success-card {
+  width: 100%;
+  max-width: 560px;
+  padding: 40px 30px;
+  box-sizing: border-box;
+  text-align: center;
+  background: #fff;
+  border: 1px solid #eee8e1;
+  border-radius: 16px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.05);
+}
+
+.success-check {
+  width: 64px;
+  height: 64px;
+  margin: 0 auto 24px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: #e5f5e9;
+  color: #237a3b;
+  font-size: 36px;
+}
+
+.order-success-card h1 {
+  margin: 10px 0;
+  font-size: clamp(28px, 5vw, 38px);
+}
+
+.order-success-card > p:not(.checkout-label) {
+  color: #777;
+  line-height: 1.7;
+}
+
+.success-order-details {
+  margin: 28px 0;
+  padding: 8px 18px;
+  text-align: left;
+  background: #faf9f6;
+  border-radius: 10px;
+}
+
+.success-order-details p {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 12px 0;
+  margin: 0;
+  border-bottom: 1px solid #e9e4dd;
+  overflow-wrap: anywhere;
+}
+
+.success-order-details p:last-child {
+  border-bottom: none;
+}
+
+.success-order-details span {
+  color: #777;
+}
+
+.success-order-details strong {
+  text-align: right;
+}
+
+.success-home-button {
+  display: block;
+  padding: 15px;
+  margin-top: 24px;
+  border-radius: 8px;
+  background: #252525;
+  color: #fff;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.success-home-button:hover {
+  background: #a16d43;
+}
+
+@media (max-width: 450px) {
+  .order-success-card {
+    padding: 30px 18px;
+  }
+
+  .success-order-details {
+    padding: 8px 12px;
+  }
+}

@@ -1,0 +1,149 @@
+.products-section {
+  padding: 80px 9%;
+  background: #ffffff;
+}
+
+.products-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  gap: 20px;
+  margin-bottom: 35px;
+}
+
+.section-label {
+  color: #647d5e;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  margin-bottom: 12px;
+}
+
+.products-heading h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(30px, 4vw, 42px);
+  margin-bottom: 10px;
+}
+
+.products-subtitle {
+  color: #777d72;
+  font-size: 14px;
+}
+
+.product-count {
+  color: #777d72;
+  font-size: 11px;
+  letter-spacing: 1px;
+  padding-bottom: 8px;
+  white-space: nowrap;
+}
+
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 22px;
+}
+
+.product-card {
+  min-width: 0;
+}
+
+.product-image {
+  position: relative;
+  aspect-ratio: 4 / 4.5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+  overflow: hidden;
+  transition: transform 0.2s;
+}
+
+.product-card:hover .product-image {
+  transform: translateY(-4px);
+}
+
+.product-emoji {
+  font-size: 75px;
+}
+
+.product-wishlist {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  width: 35px;
+  height: 35px;
+  border: none;
+  border-radius: 50%;
+  background: white;
+  font-size: 22px;
+  color: #526b52;
+}
+
+.product-category {
+  color: #81867d;
+  font-size: 11px;
+  margin: 17px 0 6px;
+}
+
+.product-card h3 {
+  font-size: 15px;
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+
+.product-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.product-price {
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.add-cart {
+  padding: 7px 12px;
+  background: #526b52;
+  color: white;
+  border: none;
+  border-radius: 3px;
+  font-size: 12px;
+}
+
+.add-cart:hover {
+  background: #3e553e;
+}
+.product-photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.add-cart:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+@media (max-width: 900px) {
+  .products-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 500px) {
+  .products-section {
+    padding: 55px 5%;
+  }
+
+  .products-heading {
+    align-items: start;
+    flex-direction: column;
+  }
+
+  .product-emoji {
+    font-size: 55px;
+  }
+}
