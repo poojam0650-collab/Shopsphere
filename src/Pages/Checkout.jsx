@@ -21,7 +21,25 @@ function Checkout() {
     postalCode: '',
     paymentMethod: 'cod',
   });
+useEffect(() => {
+  const savedUser = localStorage.getItem('shopSphereCurrentUser');
 
+  if (savedUser) {
+    try {
+      const user = JSON.parse(savedUser);
+
+      setCustomer((current) => ({
+        ...current,
+        name: user.name || '',
+        email: user.email || '',
+        phone: user.phone || '',
+        address: user.address || '',
+      }));
+    } catch (error) {
+      console.error('Error loading saved user details:', error);
+    }
+  }
+}, []);
   useEffect(() => {
     const fetchCart = async () => {
       try {
