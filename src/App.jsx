@@ -12,6 +12,10 @@ import Contact from './Pages/Contact';
 import Signup from './Pages/Signup';
 import Login from './Pages/Login';
 import ProtectRoute from './Components/ProtectRoute';
+import AdminDashboard from './Admin/AdminDashboard';
+import AdminProducts from './Admin/AdminProduct';
+import AdminOrders from './Admin/AdminOrders';
+import AdminCustomers from './Admin/AdminCustomers';
 
 function App() {
   return (
@@ -70,6 +74,10 @@ function App() {
       </ProtectRoute>
     }
   />
+  <Route path='/admin' element={<AdminDashboard/>}/>
+  <Route path='/admin/products' element={<AdminProducts/>}/>
+  <Route path='/admin/orders' element={<AdminOrders/>}/>
+  <Route path='/admin/customers' element={<AdminCustomers/>}/>
 </Routes>
     </BrowserRouter>
     

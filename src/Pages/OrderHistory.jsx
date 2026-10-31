@@ -74,30 +74,10 @@ function OrderHistory() {
                       <p className="history-muted">Order ID</p>
                       <h2>{order.id}</h2>
                     </div>
-
-                    <div className="history-status-area">
-                      <span className="history-status">
+                    <div className='history-status-area'>
+                      <span className='history-status'>
                         {status}
                       </span>
-
-                      <label className="status-selector-label">
-                        Update order status
-                        <select
-                          value={status}
-                          onChange={(event) =>
-                            updateOrderStatus(
-                              order.id,
-                              event.target.value
-                            )
-                          }
-                        >
-                          {stages.map((stage) => (
-                            <option key={stage} value={stage}>
-                              {stage}
-                            </option>
-                          ))}
-                        </select>
-                      </label>
                     </div>
                   </div>
 
