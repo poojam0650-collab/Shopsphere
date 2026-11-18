@@ -8,16 +8,25 @@ import sneakers from '../assets/sneakers.jpg';
 import watch from '../assets/watch.jpg';
 import headphones from '../assets/headphones.jpg';
 import backpack from '../assets/backpack.jpg';
+import tshirt from '../assets/cotton tshirt.jpg';
+
 
 function WishlistPage() {
   const [wishlist, setWishlist] = useState([]);
   const [addingId, setAddingId] = useState(null);
-
+  const imagesByKey = {
+      sneakers,
+      watch,
+      headphones,
+      backpack,
+      tshirt,
+  };
   const localImages = {
     'Classic Sneakers': sneakers,
     'Minimal Watch': watch,
     'Wireless Headphones': headphones,
     'Everyday Backpack': backpack,
+    'Cotton T-shirt': tshirt,
   };
 
   useEffect(() => {
@@ -90,7 +99,7 @@ function WishlistPage() {
               <article className="wishlist-card" key={product.id}>
                 <div className="wishlist-image">
                   <img
-                    src={localImages[product.name]}
+                    src={imagesByKey[product.imageKey] || localImages[product.name] || backpack}
                     alt={product.name}
                   />
                 </div>
